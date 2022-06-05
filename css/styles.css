@@ -1,17 +1,62 @@
-html {
-  font-size: 16px;
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-regular.otf');
+  font-style: normal;
+  font-weight: 400;
 }
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-italic.otf');
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold.otf');
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: charter;
+  src: url('../fonts/charter-bold-italic.otf');
+  font-style: italic;
+  font-weight: bold;
+}
+
+:root {
+  --grey30: #212121;
+  --grey20: #212429;
+  --grey10: #616161;
+}
+
 
 body {
-  color: #212121;
-}
-
-header {
-  font-size: 14px;
+  color: var(--grey30);
+  font-family: charter;
 }
 
 a {
-  color: #212121;
+  color: var(--grey30);
+}
+
+
+header {
+  /* --grey10: red; */
+  font-size: 14px;
+  color: var(--grey10);
+}
+
+header a {
+  color: var(--grey10);
+  text-decoration: none;
+}
+
+header a:hover {
+  color: var(--grey30);
+}
+
+nav details summary {
+  font-weight: bold;
 }
 
 h1 {
@@ -19,7 +64,7 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 2em;
 }
 
 h3 {
