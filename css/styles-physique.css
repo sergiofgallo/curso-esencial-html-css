@@ -29,6 +29,9 @@
   --grey10: #616161;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: var(--grey30);
@@ -45,7 +48,15 @@ a {
 header {
   /* --grey10: red; */
   font-size: 14px;
+  width: 188px;
   color: var(--grey10);
+  position: absolute;
+  top: 64px;
+  left: -232px;
+}
+
+header li {
+  margin-bottom: 16px;
 }
 
 header a {
@@ -59,12 +70,38 @@ header a:hover {
 
 nav details summary {
   font-weight: bold;
+  line-height: 24px;
 }
+
+
 
 h1 {
   font-size: 60px;
   margin-top: 64px;
   margin-bottom: 16px;
+  font-weight: normal;
+}
+
+/* .debug {
+  outline: 1px solid red;
+  border: 1px solid red;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 1px red;
+  box-shadow: inset 0 0 0 1px red;
+} */
+
+/* main {
+  background: purple;
+} */
+
+.wrapper {
+  width: 902px;
+  margin: auto;
+}
+
+.main-content {
+  /* background: blue; */
+  background: white;
 }
 
 h1 ~ p {
@@ -82,18 +119,50 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 1.5em;
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  position: sticky;
+  top: 0;
+  background: white;
 }
 
 pre {
   background: #FEC62E;
+  padding: 40px;
+  font-family: 'Roboto';
+  line-height: 24px;
 }
 
 blockquote {
+  font-size: 24px;
   margin: 32px 0;
+  padding-left: 16px;
+  line-height: 24px;
+  /* border: 10px solid red; */
+  border-left: 4px solid var(--grey30);
+}
+
+blockquote span {
+  color: var(--grey10);
+}
+
+blockquote span::before {
+  content: '-';
+}
+
+.header {
+  position: sticky;
+  border: 1px solid red;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+.main {
+  /* position: relative; */
 }
 
 .hero {
@@ -132,6 +201,8 @@ blockquote {
 }
 .section-content h3 {
   counter-increment: titlelist;
+  padding-bottom: 8px;
+  /* background: red; */
 }
 
 .section-content h3::before {
@@ -139,10 +210,13 @@ blockquote {
 }
 .section-content h3::after {
   content: '';
-  width: 32px;
+  width: 80px;
   height: 4px;
   background: var(--grey30);
   display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 
