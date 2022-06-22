@@ -42,34 +42,14 @@ a {
   color: var(--white30);
 }
 
-.header {
-  position: sticky;
-  inset-block-start: -45px;
-  /* background: red;
-  position: fixed; */
-  /* inset: 50px; */
-  /* inset-inline: 50px; */
-  /* inset-block: 50px; */
-  /* inline-size: 500px; */
-  /* block-size: 500px; */
-}
-
 .header-content {
-  position: relative;
-  inset-block-start: 65px;
-
+  padding-inline: 20px;
 }
 
 header {
-  /* --white10: red; */
+  margin-block-start: 20px;
   font-size: 14px;
   color: var(--white30);
-  position: absolute;
-  /* inset-block-end: ; */
-  /* inset-inline-start: ;
-  inset-inline-end: ; */
-  inset-inline-start: -208px;
-  inline-size: 188px;
 }
 
 header li {
@@ -94,8 +74,8 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 60px;
-  margin-block-start: 64px;
+  font-size: 40px;
+  margin-block-start: 20px;
   margin-block-end: 16px;
   /* text-align: center; */
   /* text-align: start;
@@ -144,7 +124,7 @@ hr {
   /* background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover; */
-  height: 350px;
+  block-size: 50px;
 }
 .section-content img {
   margin-block-start: 40px;
@@ -265,4 +245,45 @@ blockquote p {
 
 .form ::-webkit-input-placeholder{
   color: var(--white20);
+}
+
+
+@media screen and (min-width:1366px) {
+  .hero {
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -45px;
+    /* background: red;
+    position: fixed; */
+    /* inset: 50px; */
+    /* inset-inline: 50px; */
+    /* inset-block: 50px; */
+    /* inline-size: 500px; */
+    /* block-size: 500px; */
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+    padding-inline: 0;
+
+  }
+
+  header {
+    /* --white10: red; */
+    font-size: 14px;
+    color: var(--white30);
+    position: absolute;
+    /* inset-block-end: ; */
+    /* inset-inline-start: ;
+    inset-inline-end: ; */
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+  h1 {
+    font-size: 60px;
+    margin-block-start: 64px;
+  }
 }
