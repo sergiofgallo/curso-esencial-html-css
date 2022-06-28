@@ -27,6 +27,10 @@
   --white30: white;
   --white20: #A5A3A5;
   --white10: #3A3539;
+  --pink: #D4939D;
+  --blue: #B8C1EC;
+
+
 }
 
 
@@ -34,7 +38,7 @@ body {
   color: var(--white30);
   font-family: 'Nunito', sans-serif;
   /* font-family: charter; */
-  background: #251F24;
+  background: #232946;
   margin: 0;
 }
 
@@ -66,7 +70,7 @@ a {
 
 .variants li {
   list-style: none;
-
+  inline-size: 100%;
 }
 
 .variants a {
@@ -75,6 +79,7 @@ a {
   height: 40px;
   width: 100%;
   padding: 8px;
+  color: var(--blue);
   border-radius: 4px;
   box-sizing: border-box;
 
@@ -90,17 +95,17 @@ a {
 }
 
 header {
-  margin-block-start: 20px;
+  margin-block-start: 40px;
   font-size: 14px;
   color: var(--white30);
 }
 
 header li {
-  color: var(--white20);
+  color: var(--blue);
   margin-block-end: 16px;
 }
 header a {
-  color: var(--white20);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -136,19 +141,20 @@ h3 {
   margin-block: 16px;
 }
 p {
-  color: var(--white20);
+  color: var(--blue);
+;
 }
 pre {
-  background: var(--white10);
+  background: none;
   padding: 40px;
   overflow: auto;
   border-radius: 8px;
-  border: 10px solid red;
+  /* border: 10px solid red;
   border-inline-start: 5px solid orange;
   border-block: 20px solid pink;
   border-block-start-color: green;
   border: 10px solid #5551FF;
-  box-shadow: -10px 10px 0 0 #ABAAF6;
+  box-shadow: -10px 10px 0 0 #ABAAF6; */
   margin-block-end: 30px;
   /* border-start-start-radius: 60px;
   border-start-end-radius: 180px;
@@ -197,7 +203,7 @@ hr {
 blockquote {
   margin-block-start: 80px;
   margin-block-end: 63px;
-  background: var(--white10);
+  background: var(--pink);
   border-radius: 8px;
   line-height: 32px;
   font-size: 24px;
@@ -206,10 +212,12 @@ blockquote {
   padding-inline-start: 24px;
   padding-block-start: 24px;
   padding-block-end: 24px;
+  inset-inline: 100%;
+  margin-inline: 0px;
 }
 
 blockquote p {
-  color: var(--white30);
+  color: #232946;
 }
 
 .main hr {
@@ -264,14 +272,18 @@ blockquote p {
   display: inline-block;
   inline-size: 15px;
   block-size: 15px;
-  background: white;
+  background: var(--blue);
   border-radius: 50%;
+}
+
+.slider-bullet:hover {
+  background: white;
 }
 
 .form input {
   inline-size: 100%;
   border: 1px solid var(--white30);
-  background-color: #251F24;
+  background-color: #232946;
   box-sizing: border-box;
   border-radius: 8px;
   padding-inline: 16px;
@@ -282,8 +294,16 @@ blockquote p {
   margin-block-end: 24px;
 }
 .form input[type="submit"] {
-  background: #157EFB;
+  background: var(--pink);
   border: none;
+  color: #232946;
+}
+
+.section-content ol {
+  color: var(--blue);
+}
+p a {
+  color: var(--pink);
 }
 
 .form ::-webkit-input-placeholder{
@@ -292,7 +312,7 @@ blockquote p {
 
 .footer {
   margin-top: 40px;
-  background: white;
+  background: var(--pink);
   height: 174px;
 }
 .footer .footer-container {
@@ -324,7 +344,7 @@ blockquote p {
   }
   .header {
     position: sticky;
-    inset-block-start: -280px;
+    inset-block-start: -260px;
     /* background: red;
     position: fixed; */
     /* inset: 50px; */
@@ -336,7 +356,7 @@ blockquote p {
 
   .header-content {
     position: relative;
-    inset-block-start: 302px;
+    inset-block-start: 250px;
     padding-inline: 0;
 
   }
@@ -364,7 +384,7 @@ blockquote p {
     font-size: 14px;
     /* width: 188px; */
     position: relative;
-    top: 65px;
+    inset-block-start: 0px;
     /* left: 75px; */
     /* border: 1px solid red; */
     color: var(--grey10);

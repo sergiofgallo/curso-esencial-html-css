@@ -27,6 +27,7 @@
   --grey30: #212121;
   --grey20: #212429;
   --grey10: #616161;
+  --blue30: #5551FF
 }
 
 html {
@@ -46,12 +47,15 @@ a {
 
 .variants-content {
   /* max-width: 902px; */
-  padding: 16px;
+  margin-top: 24px;
+  padding: 0 16px;
   padding-bottom: 0;
+  box-sizing: border-box;
 }
 
 .variants ul {
   padding: 0;
+  inline-size: 208px;
 }
 
 .variants h4 {
@@ -89,12 +93,20 @@ a {
   padding-bottom: 0;
 } */
 
+.header-content {
+  inline-size: 100%;
+}
+
+
 header {
-  display: none;
+  display: block;
+  padding: 0 16px;
+  inline-size: 100%;
+  box-sizing: border-box;
 }
 
 header li {
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 header a {
@@ -118,7 +130,7 @@ h1 {
   font-size: 24px;
   margin-top: 40px;
   margin-bottom: 16px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /* .debug {
@@ -142,6 +154,7 @@ h1 {
   /* background: blue; */
   background: white;
   padding: 0 16px;
+  text-align: center;
 }
 
 h1 ~ p {
@@ -175,20 +188,33 @@ p {
 }
 
 pre {
-  background: #FEC62E;
+  background: var(--white10);
   padding: 40px;
-  font-family: 'Roboto';
-  line-height: 24px;
   overflow: auto;
+  border-radius: 8px;
+  border: 10px solid red;
+  border-inline-start: 5px solid orange;
+  border-block: 20px solid pink;
+  border-block-start-color: green;
+  border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6;
+  margin-block-end: 30px;
+  /* border-start-start-radius: 60px;
+  border-start-end-radius: 180px;
+  border-end-start-radius: 100px;
+  border-end-end-radius: 50px; */
+  text-align: start;
 }
 
 blockquote {
   font-size: 24px;
-  margin: 32px 0;
+  margin: 32px auto;
+  max-inline-size: 613px;
   padding-left: 16px;
   line-height: 24px;
   /* border: 10px solid red; */
-  border-left: 4px solid var(--grey30);
+  border-left: 4px solid var(--blue30);
+  text-align: start;
 }
 
 blockquote span {
@@ -200,13 +226,29 @@ blockquote span::before {
 }
 
 
-.header-content {
-  position: relative;
+.header-content ol {
+  padding: 0;
+}
+.header-content li {
+  list-style: none;
+}
+
+.header-content ol a {
+  display: block;
+  block-size: 40px;
+  inline-size: 100%;
+  padding: 8px 0 8px 8px;
+  box-sizing: border-box;
+}
+
+.header-content a:hover {
+  background: var(--blue30);
+  color: white;
 }
 
 
 .hero {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/patron.png');
+  background: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(../images/patron-2.png);
   /* background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover; */
@@ -250,7 +292,7 @@ blockquote span::before {
 .section-content h3::before {
   content: counter(titlelist, decimal)". ";
 }
-.section-content h3::after {
+/* .section-content h3::after {
   content: '';
   width: 80px;
   height: 4px;
@@ -259,8 +301,11 @@ blockquote span::before {
   position: absolute;
   left: 0;
   bottom: 0;
+} */
+.section-content-model {
+  text-align: start;
+  box-sizing: border-box;
 }
-
 .section-content-model ul, ol {
   padding-left: 16px;
   /* list-style: none; */
@@ -268,6 +313,14 @@ blockquote span::before {
 
 .section-content-model ol {
   line-height: 24px;
+}
+.section-content-model ul {
+  color: var(--blue30);
+}
+
+.section-content-model ul li p {
+  color: var(--grey30);
+  padding: 0;
 }
 
 .section-content-model ul li {
@@ -302,12 +355,12 @@ blockquote span::before {
   display: inline-block;
   width: 15px;
   height: 15px;
-  background: var(--grey10);
+  background: rgba(142, 45, 226, 0.5);
   border-radius: 50%;
 }
 
 .slider-bullet:hover {
-  background: var(--grey30);
+  background: var(--blue30);
 }
 
 form input {
@@ -320,12 +373,17 @@ form input {
   margin-top: 16px;
   /* color: red; */
 }
+
+.section-content-form{
+  text-align: start;
+}
 .form ::-webkit-input-placeholder{
   color: var(--white30);
 }
 .form-clic {
   position: relative;
   max-width: 380px;
+  margin: 0 auto;
 }
 
 .form-clic input {
@@ -333,7 +391,7 @@ form input {
 }
 
 .form input[type="submit"] {
-  background: var(--grey30);
+  background: var(--blue30);
   color: white;
   position: absolute;
   width: 115px;
@@ -363,6 +421,7 @@ form input {
   width: 18px;
   height: 18px;
   margin-left: 19px;
+  /* box-sizing: border-box; */
 }
 
 
@@ -381,8 +440,7 @@ form input {
   }
   .variants-menu {
     position: absolute;
-    left: -208px;
-    width: 188px;
+    right: -232px;
   }
   header {
     /* --grey10: red; */
@@ -392,8 +450,9 @@ form input {
     color: var(--grey10);
     position: absolute;
     top: 380px;
-    left: -208px;
+    right: 100px;
   }
+
 
   .header {
     position: sticky;
@@ -430,4 +489,3 @@ form input {
     font-size: 32px;
   }
 }
-

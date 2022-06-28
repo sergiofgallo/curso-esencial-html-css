@@ -44,9 +44,14 @@ a {
   color: var(--grey30);
 }
 
+.hero-content {
+  padding: 0 16px;
+  margin-top: 40px;
+}
+
 .variants-content {
   /* max-width: 902px; */
-  padding: 16px;
+  padding: 0 16px;
   padding-bottom: 0;
 }
 
@@ -89,8 +94,18 @@ a {
   padding-bottom: 0;
 } */
 
+.header {
+  padding: 0 16px;
+}
+.header-content h2 {
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
 header {
-  display: none;
+  border-left: 4px solid #C4C4C4;
+  display: block;
+  padding-left: 16px;
 }
 
 header li {
@@ -164,8 +179,8 @@ h3 {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
-  position: sticky;
-  top: 0;
+  /* position: sticky;
+  top: 0; */
   background: white;
 }
 
@@ -175,7 +190,7 @@ p {
 }
 
 pre {
-  background: #FEC62E;
+  background: #E5E5E5;
   padding: 40px;
   font-family: 'Roboto';
   line-height: 24px;
@@ -206,11 +221,7 @@ blockquote span::before {
 
 
 .hero {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/patron.png');
-  /* background-repeat: no-repeat;
-  background-position: right bottom;
-  background-size: cover; */
-  height: 96px;
+
 }
 .section-content {
   margin-top: 0;
@@ -250,16 +261,7 @@ blockquote span::before {
 .section-content h3::before {
   content: counter(titlelist, decimal)". ";
 }
-.section-content h3::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background: var(--grey30);
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
+
 
 .section-content-model ul, ol {
   padding-left: 16px;
@@ -367,37 +369,10 @@ form input {
 
 
 @media screen and (min-width:1366px) {
-  .hero {
-    height: 350px;
-  }
-  .variants-content {
-    font-size: 14px;
-    /* width: 188px; */
-    position: relative;
-    top: 65px;
-    /* left: 75px; */
-    /* border: 1px solid red; */
-    color: var(--grey10);
-  }
-  .variants-menu {
-    position: absolute;
-    left: -208px;
-    width: 188px;
-  }
-  header {
-    /* --grey10: red; */
-    display: block;
-    font-size: 14px;
-    width: 188px;
-    color: var(--grey10);
-    position: absolute;
-    top: 380px;
-    left: -208px;
-  }
 
-  .header {
-    position: sticky;
-    top: -350px;
+  .variants-menu {
+    width: 280px;
+    margin-bottom: 104px;
   }
 
   h1 {
@@ -430,4 +405,3 @@ form input {
     font-size: 32px;
   }
 }
-
